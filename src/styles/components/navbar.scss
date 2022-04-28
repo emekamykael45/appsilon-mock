@@ -1,5 +1,5 @@
 .navbar_container {
-  @include flex-position(space-between, center);
+  @include flex-position(flex-start, center);
   position: fixed;
   top: 0;
   left: 280px;
@@ -12,16 +12,16 @@
 
   @media screen and (max-width: 990px) {
     left: 0px;
-    padding: 20px 15px;
+    padding: 22px 15px;
   }
 
   .sidebar_toggler {
-    margin-right: 15px;
+    margin-right: 30px;
 
     img,
     svg {
-      height: 30px;
-      width: 30px;
+      height: 25px;
+      width: 25px;
     }
   }
 

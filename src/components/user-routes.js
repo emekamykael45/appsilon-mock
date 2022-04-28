@@ -20,7 +20,7 @@ const userRoutes = [
     component: PolicyPage,
   },
   {
-    icon: "reports",
+    icon: "report",
     label: "Reports",
     to: "/reports",
     component: Reports,

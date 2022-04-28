@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Add } from "./add";
 import { Close } from "./close";
 import { Company } from "./company";
 import { History } from "./history";
@@ -11,6 +12,8 @@ import { UserAccount } from "./user-account";
 
 const Icon = ({ name }) => {
   switch (name) {
+    case "add":
+      return <Add />;
     case "close":
       return <Close />;
     case "company":
