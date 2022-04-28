@@ -1,0 +1,23 @@
+@mixin circle($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin flex-position($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid-columns($columns: 0.5fr 3fr 1fr 1fr 1fr 1fr, $gap: 24px) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}

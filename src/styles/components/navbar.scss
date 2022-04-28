@@ -1,0 +1,61 @@
+.navbar_container {
+  @include flex-position(space-between, center);
+  position: fixed;
+  top: 0;
+  left: 280px;
+  padding: 25px 55px;
+  width: 100%;
+  max-width: 1545px;
+  background: $color-white;
+  box-shadow: $box-shadow-navbar;
+  z-index: 2;
+
+  @media screen and (max-width: 990px) {
+    left: 0px;
+    padding: 20px 15px;
+  }
+
+  .sidebar_toggler {
+    margin-right: 15px;
+
+    img,
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .links {
+    @include flex-position(flex-start, flex-start);
+
+    a {
+      position: relative;
+      display: block;
+      margin-right: 35px;
+      color: $color-black-2;
+
+      &.active {
+        color: $color-purple;
+        font-weight: 600;
+
+        &::after {
+          @include flex-position(center, center);
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: 13px;
+          width: 20px;
+          height: 4px;
+          background: $color-purple;
+          border-radius: 1px;
+        }
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

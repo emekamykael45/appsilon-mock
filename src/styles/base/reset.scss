@@ -1,0 +1,153 @@
+@import "../abstract/mixins.scss";
+@import "../abstract/variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+body {
+  background: $color-white;
+  font-family: $font-family-dm;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+span {
+  margin: 0;
+  font-family: $font-family-dm !important;
+  letter-spacing: 0.2px;
+  color: $color-text;
+}
+a {
+  letter-spacing: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:active,
+  &:hover,
+  &:focus {
+    @extend a;
+  }
+}
+
+svg {
+  path {
+    fill: $color-text;
+  }
+}
+
+button,
+.btn {
+  @include flex-position(center, center);
+  font-weight: 600;
+  box-shadow: $box-shadow-button;
+
+  &:focus,
+  &:active {
+    box-shadow: none !important;
+    outline: 0 !important;
+  }
+
+  .right_icon {
+    margin-top: -1px;
+    margin-left: 12px;
+  }
+}
+
+.btn_primary {
+  @extend .btn;
+  padding: 8px 20px;
+  color: $color-white-2;
+  background: $color-purple !important;
+  border-radius: 7px;
+  box-shadow: $box-shadow-button;
+
+  &:hover,
+  &:focus {
+    @extend .btn_primary;
+  }
+
+  svg path {
+    stroke: $color-white-2;
+  }
+}
+
+.btn_text {
+  @extend .btn;
+  color: $color-black-2;
+
+  &:hover,
+  &:focus {
+    @extend .btn_text;
+  }
+}
+
+.dashboard {
+  @include flex-position(flex-start, flex-start);
+  max-width: 1800px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  &.hide_sidebar {
+    .sidebar_container {
+      display: none;
+    }
+
+    .dashboard_content {
+      width: 100%;
+
+      .navbar_container {
+        width: 100%;
+      }
+    }
+  }
+
+  .dashboard_content {
+    position: relative;
+    margin: 0 0 0 auto;
+    padding: 103px 36px 60px 36px;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    background: #00198403;
+
+    .navbar_container {
+      width: calc(100% - 280px);
+    }
+
+    @media screen and (max-width: 990px) {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+
+      .navbar_container {
+        width: 100%;
+      }
+    }
+  }
+}
