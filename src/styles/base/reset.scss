@@ -73,8 +73,7 @@ button,
     outline: 0 !important;
   }
 
-  .right_icon {
-    margin-top: -1px;
+  span {
     margin-left: 12px;
   }
 }
@@ -92,18 +91,24 @@ button,
     @extend .btn_primary;
   }
 
-  svg path {
-    stroke: $color-white-2;
+  span {
+    color: $color-white-2;
   }
 }
 
 .btn_text {
   @extend .btn;
+  padding: 0;
   color: $color-black-2;
+  box-shadow: none;
 
   &:hover,
   &:focus {
     @extend .btn_text;
+  }
+
+  span {
+    color: $color-black-2;
   }
 }
 

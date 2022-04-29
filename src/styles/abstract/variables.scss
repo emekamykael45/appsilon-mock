@@ -9,8 +9,21 @@ $color-text-2: #888cb7;
 $color-black: #000000;
 $color-black-2: #42474a;
 
-$linear-gradient-1: linear-gradient(90deg, #33d69f 0%, #50edb8 111.47%);
-$linear-gradient-2: linear-gradient(90deg, #713bdb 0%, #a886e9 111.47%);
+$linear-gradient-progress-bar-1: linear-gradient(
+  90deg,
+  #33d69f 0%,
+  #50edb8 111.47%
+);
+$linear-gradient-progress-bar-2: linear-gradient(
+  90deg,
+  #713bdb 0%,
+  #a886e9 111.47%
+);
+$linear-gradient-progress-bar-background: linear-gradient(
+  90deg,
+  #ececec 0%,
+  #f2f1f1 111.47%
+);
 
 $box-shadow-navbar: 3px 5px 15px rgba(0, 0, 0, 0.1);
 $box-shadow-sidebar: 10px 3px 15px rgba(0, 0, 0, 0.05);

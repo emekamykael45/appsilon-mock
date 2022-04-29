@@ -5,7 +5,6 @@
   left: 280px;
   padding: 25px 55px;
   width: 100%;
-  max-width: 1545px;
   background: $color-white;
   box-shadow: $box-shadow-navbar;
   z-index: 2;
@@ -47,7 +46,7 @@
           transform: translate(-50%, -50%);
           margin-top: 13px;
           width: 20px;
-          height: 4px;
+          height: 3px;
           background: $color-purple;
           border-radius: 1px;
         }

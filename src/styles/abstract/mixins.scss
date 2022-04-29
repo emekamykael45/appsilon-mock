@@ -1,15 +1,3 @@
-@mixin circle($width, $height) {
-  width: $width;
-  height: $height;
-  border-radius: 50%;
-}
-
-@mixin ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 @mixin flex-position($justify, $align) {
   display: flex;
   justify-content: $justify;

@@ -32,7 +32,13 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             Your Plan : <span>Free</span>
           </h6>
 
-          <Button text="Create New Plan" icon="add" />
+          <Button
+            text={
+              <>
+                Create New Plan<span>+</span>
+              </>
+            }
+          />
         </div>
 
         <div className="links_container">
